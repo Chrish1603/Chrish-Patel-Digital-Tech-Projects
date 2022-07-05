@@ -1,0 +1,148 @@
+body {
+	margin: auto;
+	padding: 50px;
+	color: #000000; /* white */
+	font-family: 'Open Sans', sans-serif;
+}
+
+/* ---- set up site grid ---- */
+
+.wrapper {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+		"logo header search-bar"
+		"nav nav nav"
+		"main main side"
+		"footer footer footer";
+	grid-gap: 4px; 
+	
+}
+
+/* ---- end of site grid ---- */
+
+
+/* -000- area styling -000- */
+
+.box {
+	border: solid 1px #000000; /* black */
+	padding: 20px;
+	background-color: #ffffff; /* white */
+	border-radius: 10px;
+}
+
+/* area coloring... */
+
+/* header and footer backround are the same */
+
+.header, .search-bar {
+background-color: #E0E0E0; /* light grey */
+}
+
+/* navigation and footer are the same backround color */
+
+.nav, .footer {
+background-color: #00E300 /* green */
+}
+
+/* area specifics */
+
+.logo {
+	grid-area: logo;
+	padding: 0;
+	height: 119px;
+}
+
+.header {
+	grid-area: header;
+}
+
+.search-bar {
+	grid-area: search-bar;}
+
+	input[type=text] {
+  width: 150px;
+  height: 30px;
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: solid 1px #000000; /* black */
+		
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+/* When the input field gets focus, change its width to 100% */
+
+input[type=text]:focus {
+  width: 100%;
+}
+
+.nav {
+	grid-area: nav;
+	font-size: 150%;
+	text-align: center;
+}
+
+.main {
+	grid-area: main;
+	padding: 0;
+	border-radius: 0px;
+	height: 550px;
+}
+
+.side {
+	grid-area: side;
+}
+
+.footer {
+	grid-area: footer;
+	text-align: center;
+	height: 10px;
+}
+
+/* -000- end of area styling -000- */
+
+/* navigation links */ 
+
+.nav a {
+	font-weight: bold;
+}
+.nav a:link, .nav a:visited {
+	color: #000000; text-decoration: none;
+}
+.nav a:hover {
+	text-decoration:underline;
+}
+
+/* side bar links */
+
+.side a:link, .nav a:visited {
+	color: #000000; text-decoration: none;
+}
+.side a:hover {
+	text-decoration: underline;
+}
+
+/* align text to center */
+
+h2 {
+	text-align: center;
+}
+
+/* align image to center */
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* make image responsive */
+
+.responsive {
+	width: 100%;
+	height: 100%;
+}
