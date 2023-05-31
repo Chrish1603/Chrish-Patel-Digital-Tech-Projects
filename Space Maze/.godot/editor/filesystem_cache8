@@ -1,0 +1,9 @@
+fc8a56933c4b1c8d796fdb8f7a9f9475
+::res://::1685492686
+icon.svg::CompressedTexture2D::7015325649136772883::1684886679::1685492560::1::::<><>::
+rocket.tscn::PackedScene::8886396320737167933::1685492154::0::1::::<><>::res://scripts/rocket.gd<>uid://8ofv06qg5uot
+::res://assets/::1685492504
+logo.png::CompressedTexture2D::4060138661750443631::1680124136::1685492560::1::::<><>::
+Rocket.png::CompressedTexture2D::2345475576956618703::1684887861::1685492560::1::::<><>::
+::res://scripts/::1685492504
+rocket.gd::GDScript::-1::1685492020::0::1::::<>Area2D<>::
