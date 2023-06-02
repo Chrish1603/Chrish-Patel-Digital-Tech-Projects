@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3hlxgduc8brj"]
+
+[ext_resource type="PackedScene" uid="uid://dyuvwclubhrdl" path="res://scenes/rocket.tscn" id="1_mxwhb"]
+[ext_resource type="PackedScene" uid="uid://cg2psxpcpngkf" path="res://scenes/star.tscn" id="2_iy6bd"]
+[ext_resource type="Script" path="res://scenes/score.gd" id="3_2cjie"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nubkg"]
+font_size = 50
+
+[node name="main" type="Node2D"]
+
+[node name="Rocket" parent="." instance=ExtResource("1_mxwhb")]
+
+[node name="Star" parent="." instance=ExtResource("2_iy6bd")]
+position = Vector2(189, 0)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_2cjie")
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Score : 0"
+label_settings = SubResource("LabelSettings_nubkg")
+
+[connection signal="area_entered" from="Rocket" to="Rocket" method="_on_area_entered"]
+[connection signal="star" from="Rocket" to="Control" method="update_score"]

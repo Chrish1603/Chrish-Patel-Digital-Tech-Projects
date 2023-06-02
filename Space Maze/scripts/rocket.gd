@@ -2,6 +2,7 @@ extends Area2D
 
 @export var speed = 600
 var screen_size
+signal star
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -32,3 +33,7 @@ func _process(delta):
 	position.y = clamp(position.y, 0, screen_size.y)
 	
 # f
+
+
+func _on_area_entered(area):
+	star.emit(area)

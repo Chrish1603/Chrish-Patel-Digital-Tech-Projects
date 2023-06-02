@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dr171mdk4xmbw"]
+
+[ext_resource type="Texture2D" uid="uid://ibhlh2it3tc7" path="res://assets/gold-star-symbol-png.png" id="1_12yh4"]
+[ext_resource type="Script" path="res://star.gd" id="2_yrbvv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ke6eh"]
+radius = 64.0
+
+[node name="star" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-59.9375, -56.875)
+scale = Vector2(0.0624349, 0.0622946)
+texture = ExtResource("1_12yh4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-60, -51)
+shape = SubResource("CircleShape2D_ke6eh")
+script = ExtResource("2_yrbvv")
+
+[connection signal="area_entered" from="." to="CollisionShape2D" method="_on_star_area_entered"]

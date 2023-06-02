@@ -1,1 +1,7 @@
+res://scenes/star.tscn
+res://scenes/main.tscn
 res://rocket.tscn
+res://star.tscn
+res://star.gd
+res://scripts/rocket.gd
+res://scenes/score.gd
