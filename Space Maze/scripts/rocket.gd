@@ -31,9 +31,6 @@ func _process(delta):
 	position += velocity * delta
 	position.x = clamp(position.x, 0, screen_size.x)
 	position.y = clamp(position.y, 0, screen_size.y)
-	
-# f
-
 
 func _on_area_entered(area):
 	star.emit(area)

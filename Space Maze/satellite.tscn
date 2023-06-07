@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://3wjt5s5o7fgu"]
+
+[ext_resource type="Texture2D" uid="uid://bdtq027c6xvtw" path="res://assets/satellite.png" id="1_y4hyt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4cwpd"]
+radius = 77.0
+
+[node name="satellite" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -5.6054e-08)
+rotation = 0.785398
+scale = Vector2(0.249787, 0.24975)
+texture = ExtResource("1_y4hyt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7.10543e-15, 0)
+rotation = 1.5708
+shape = SubResource("CircleShape2D_4cwpd")
