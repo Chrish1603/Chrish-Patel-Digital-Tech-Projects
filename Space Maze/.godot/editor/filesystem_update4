@@ -1,5 +1,4 @@
+res://scenes/main.tscn
 res://rocket.tscn
 res://star.tscn
-res://scenes/main.tscn
-res://scripts/rocket.gd
 res://satellite.tscn

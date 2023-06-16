@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://3wjt5s5o7fgu"]
+[gd_scene load_steps=4 format=3 uid="uid://3wjt5s5o7fgu"]
 
+[ext_resource type="Script" path="res://satellite.gd" id="1_on8ne"]
 [ext_resource type="Texture2D" uid="uid://bdtq027c6xvtw" path="res://assets/satellite.png" id="1_y4hyt"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4cwpd"]
 radius = 77.0
 
 [node name="satellite" type="Area2D"]
+script = ExtResource("1_on8ne")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0, -5.6054e-08)
