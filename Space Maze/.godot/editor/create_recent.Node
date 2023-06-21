@@ -1,5 +1,7 @@
-TileMap
+AnimationPlayer
 CollisionShape2D
+AnimatedSprite2D
+TileMap
 Sprite2D
 Area2D
 Label
