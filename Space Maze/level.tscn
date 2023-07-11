@@ -1,18 +1,59 @@
-[gd_scene load_steps=3 format=3 uid="uid://dcwlm4yycbowi"]
+[gd_scene load_steps=10 format=3 uid="uid://dcwlm4yycbowi"]
+
+[ext_resource type="PackedScene" uid="uid://be8xf81d4nu1r" path="res://assets/player.tscn" id="1_c81rf"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="2_d3kuk"]
+[ext_resource type="Script" path="res://Camera3D.gd" id="3_2iri2"]
+[ext_resource type="Environment" uid="uid://dpe4sdiikserf" path="res://env.tres" id="3_q4lp7"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_eyr8a"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_olt6c"]
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_ujpsu"]
+size = Vector3(15, 1, 15)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_418sa"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_kd830"]
+material = SubResource("StandardMaterial3D_418sa")
+size = Vector3(30, 2, 30)
+
 [node name="Level" type="Node3D"]
 
-[node name="Box" type="RigidBody3D" parent="."]
+[node name="Box1" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.54496, 6.72627, 2.77383)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Box"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Box1"]
 shape = SubResource("BoxShape3D_eyr8a")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Box"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Box1"]
 mesh = SubResource("BoxMesh_olt6c")
 
+[node name="Floor" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -1, 2.08165e-12)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_ujpsu")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+mesh = SubResource("BoxMesh_kd830")
+
+[node name="Player" parent="." instance=ExtResource("1_c81rf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 1, 2.08165e-12)
+up_direction = Vector3(1.04082e-12, 1, 1.04082e-12)
+script = ExtResource("2_d3kuk")
+
+[node name="CameraTarget" type="Node3D" parent="Player"]
+transform = Transform3D(1, -4.9619e-16, 3.16108e-16, 3.16108e-16, 0.906307, 0.422618, -4.96191e-16, -0.422618, 0.906307, 2.08165e-12, 3, 6)
+
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.637558, -0.770402, 0, 0.770402, -0.637558, 0, 4.21504, 3.83017)
+transform = Transform3D(1, -4.96191e-16, 3.16108e-16, 3.16108e-16, 0.906308, 0.422618, -4.96191e-16, -0.422618, 0.906308, 2.08165e-12, 10, 25)
+environment = ExtResource("3_q4lp7")
+script = ExtResource("3_2iri2")
+target = NodePath("../Player/CameraTarget")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.965926, 8.59334e-08, 0.258819, 0.258819, -1.13133e-08, 0.965926, 8.59334e-08, 1, -1.13133e-08, 2.08165e-12, 5, 2.08165e-12)
+shadow_enabled = true
+directional_shadow_blend_splits = true

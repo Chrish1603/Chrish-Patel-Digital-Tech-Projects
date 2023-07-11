@@ -1,0 +1,11 @@
+Model Information:
+* title:	beach ball
+* source:	https://sketchfab.com/3d-models/beach-ball-8ed7f688d9b4441e931c45545043cd6e
+* author:	HQ3DMOD (https://sketchfab.com/AivisAstics)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "beach ball" (https://sketchfab.com/3d-models/beach-ball-8ed7f688d9b4441e931c45545043cd6e) by HQ3DMOD (https://sketchfab.com/AivisAstics) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

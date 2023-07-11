@@ -1,8 +1,11 @@
-Camera3D
-MeshInstance3D
-CollisionShape3D
-RigidBody3D
+DirectionalLight3D
 Node3D
+CollisionShape3D
+CharacterBody3D
+MeshInstance3D
+StaticBody3D
+Camera3D
+RigidBody3D
 AnimationPlayer
 CollisionShape2D
 AnimatedSprite2D

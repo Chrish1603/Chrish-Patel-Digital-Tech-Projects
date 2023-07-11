@@ -1,1 +1,6 @@
 res://level.tscn
+res://assets/playerball.tres
+res://assets/player.tscn
+res://scripts/player.gd
+res://Camera3D.gd
+res://env.tres
