@@ -1,9 +1,10 @@
+GridMap
+CollisionShape3D
+StaticBody3D
 DirectionalLight3D
 Node3D
-CollisionShape3D
 CharacterBody3D
 MeshInstance3D
-StaticBody3D
 Camera3D
 RigidBody3D
 AnimationPlayer
