@@ -4,7 +4,7 @@ extends Camera3D
 var target: NodePath
 @export
 var enabled := true
-@export_range(0, 1, 0.01)
+@export_range(0, 3, 0.01)
 var speed := 3.0
 
 func _process(delta):

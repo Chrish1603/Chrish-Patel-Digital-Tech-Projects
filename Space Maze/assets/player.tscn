@@ -2,14 +2,14 @@
 
 [ext_resource type="ArrayMesh" uid="uid://c4srfl15i5qwt" path="res://assets/playerball.tres" id="1_frvfm"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_6d21q"]
-size = Vector3(2, 2, 2)
+[sub_resource type="SphereShape3D" id="SphereShape3D_veluc"]
+radius = 1.0
 
 [node name="Player" type="CharacterBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
-shape = SubResource("BoxShape3D_6d21q")
+shape = SubResource("SphereShape3D_veluc")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_frvfm")

@@ -1,6 +1,10 @@
 res://env.tres
-res://level.tscn
+res://menu.tscn
 res://assets/playerball.tres
 res://assets/blocksLibrary.tres
+res://level.tscn
 res://assets/player.tscn
-res://assets/blocks.tscn
+res://Button_title_play.gd
+res://scripts/Button_title_play.gd
+res://Camera3D.gd
+res://scripts/player.gd

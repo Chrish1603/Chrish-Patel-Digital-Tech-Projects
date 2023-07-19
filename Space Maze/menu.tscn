@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://c2o5dlyypp615"]
+
+[ext_resource type="FontFile" uid="uid://dk6nu0n16s4a1" path="res://fonts/Kalam-Regular.ttf" id="1_d8da2"]
+[ext_resource type="FontFile" uid="uid://bydxwvup0cibb" path="res://fonts/Nunito-VariableFont_wght.ttf" id="2_qiwbg"]
+[ext_resource type="Script" path="res://Button_title_play.gd" id="3_sy8rp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4508q"]
+font = ExtResource("1_d8da2")
+font_size = 200
+font_color = Color(0.407843, 0.941176, 0.976471, 1)
+shadow_color = Color(0.984314, 0.890196, 0.447059, 1)
+shadow_offset = Vector2(10, 10)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0, 0.333333, 0.337255, 1)
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+theme_override_fonts/font = ExtResource("1_d8da2")
+text = "Maze Run!"
+label_settings = SubResource("LabelSettings_4508q")
+horizontal_alignment = 1
+
+[node name="Button_title_play" type="Button" parent="."]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 482.0
+offset_right = 800.0
+offset_bottom = 632.0
+theme_override_colors/font_color = Color(0.407843, 0.941176, 0.976471, 1)
+theme_override_colors/font_pressed_color = Color(0.984314, 0.890196, 0.447059, 1)
+theme_override_fonts/font = ExtResource("2_qiwbg")
+theme_override_font_sizes/font_size = 100
+text = "PLAY"
+flat = true
+script = ExtResource("3_sy8rp")
+
+[connection signal="pressed" from="Button_title_play" to="Button_title_play" method="_on_Buttontitleplay_pressed"]
