@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwvjvcdgrgtka"]
+
+[ext_resource type="FontFile" uid="uid://dk6nu0n16s4a1" path="res://fonts/Kalam-Regular.ttf" id="1_7r880"]
+[ext_resource type="FontFile" uid="uid://bydxwvup0cibb" path="res://fonts/Nunito-VariableFont_wght.ttf" id="2_kmnqb"]
+[ext_resource type="Script" path="res://Button_title_play.gd" id="3_nacjy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3yemh"]
+font = ExtResource("1_7r880")
+font_size = 200
+font_color = Color(0.823529, 0, 0, 1)
+shadow_color = Color(0.984314, 0.890196, 0.447059, 1)
+shadow_offset = Vector2(10, 10)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.247059, 0, 0, 1)
+
+[node name="Label" type="Label" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+theme_override_fonts/font = ExtResource("1_7r880")
+text = "Game Over!"
+label_settings = SubResource("LabelSettings_3yemh")
+horizontal_alignment = 1
+
+[node name="Button_title_play" type="Button" parent="."]
+offset_left = 369.0
+offset_top = 467.0
+offset_right = 948.0
+offset_bottom = 617.0
+theme_override_colors/font_color = Color(0.407843, 0.941176, 0.976471, 1)
+theme_override_colors/font_pressed_color = Color(0.984314, 0.890196, 0.447059, 1)
+theme_override_fonts/font = ExtResource("2_kmnqb")
+theme_override_font_sizes/font_size = 100
+text = "PLAY AGAIN"
+flat = true
+script = ExtResource("3_nacjy")
+
+[connection signal="pressed" from="Button_title_play" to="Button_title_play" method="_on_Buttontitleplay_pressed"]

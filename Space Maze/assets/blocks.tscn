@@ -9,7 +9,7 @@
 resource_name = "material-block"
 cull_mode = 2
 vertex_color_use_as_albedo = true
-albedo_color = Color(0.568627, 1, 1, 1)
+albedo_color = Color(0.835294, 0.764706, 1, 1)
 albedo_texture = ExtResource("2_nkspb")
 metallic_texture = ExtResource("3_taxns")
 metallic_texture_channel = 2
@@ -57,7 +57,7 @@ shadow_mesh = SubResource("ArrayMesh_pmo6e")
 resource_name = "material-block"
 cull_mode = 2
 vertex_color_use_as_albedo = true
-albedo_color = Color(1, 0.819608, 1, 1)
+albedo_color = Color(0, 0.956863, 0.960784, 1)
 albedo_texture = ExtResource("2_nkspb")
 metallic_texture = ExtResource("3_taxns")
 metallic_texture_channel = 2

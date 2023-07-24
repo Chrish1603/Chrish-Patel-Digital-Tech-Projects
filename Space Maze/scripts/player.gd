@@ -30,8 +30,13 @@ func _physics_process(delta):
 		$MeshInstance3D.rotate_x(deg_to_rad(ROTSPEED))
 	else:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
-	
 	move_and_slide()
+	
+	
+	
+func _on_enemy_1_body_entered(body):
+	if body.name == "Player":
+		get_tree().change_scene_to_file("res://gameover.tscn")
 	
 	# Add the gravity.
 	#if not is_on_floor():
@@ -50,4 +55,3 @@ func _physics_process(delta):
 	#else:
 		#velocity.x = move_toward(velocity.x, 0, SPEED)
 		#velocity.z = move_toward(velocity.z, 0, SPEED)
-	
