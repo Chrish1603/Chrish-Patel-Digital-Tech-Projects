@@ -1,8 +1,4 @@
 res://env.tres
-res://level.tscn
-res://assets/blocksLibrary.tres
-res://coin.tscn
 res://assets/player.tscn
-res://assets/enemy.tscn
-res://assets/blocks.tscn
-res://scripts/player.gd
+res://assets/blocksLibrary.tres
+res://level.tscn
