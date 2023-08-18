@@ -1,0 +1,11 @@
+res://assets/blocks.tscn::2999ac506d481e03fcda25e5f0c9bb5a::1692223481::res://.godot/exported/133200997/export-d6a0469eff12dbdf1c3a975163b2f769-blocks.scn
+res://assets/blocksLibrary.tres::bd900c1429069fcbdcf73f3890d47c01::1692358731::res://.godot/exported/133200997/export-a2bfff3947739703623bc9e0136e8fca-blocksLibrary.res
+res://assets/enemy.tscn::d0bf57c2246e5a35bfd9ff3a5b90d668::1689990961::res://.godot/exported/133200997/export-59b97bac2ba70696a04eddc415e1a85b-enemy.scn
+res://assets/player.tscn::98a1cdee80eb35b439acc69b36425f7d::1692361119::res://.godot/exported/133200997/export-43301691a014635de87ea972c6e7a2e3-player.scn
+res://assets/playerball.tres::11543d8591ace5e5ee6aece07577a481::1689893842::res://.godot/exported/133200997/export-6b08d150d3bbe011712eed58a9895bee-playerball.res
+res://assets/playerball.tscn::1e806b2a7c63f1e2cf189d98d6d5d42d::1687746956::res://.godot/exported/133200997/export-416516214cd0a976f4fbbf8d62a37b72-playerball.scn
+res://coin.tscn::1138f350d4f5bd947ad6fd2ba6e9282a::1689985302::res://.godot/exported/133200997/export-2c627f0aeee2256356f1e6ba540049dd-coin.scn
+res://env.tres::5c510c1a063e1d1734bcab34cd3d1e6e::1692361119::res://.godot/exported/133200997/export-58b1f056ea0c3dcdd75742516c0a4899-env.res
+res://gameover.tscn::2818b0a8b547519b8415e4c959e10d07::1689805190::res://.godot/exported/133200997/export-11f7ccd5fee5c70f5922d0bf4f5eeebb-gameover.scn
+res://level.tscn::ce86fb40b6eec8561da36449dea507e8::1692361118::res://.godot/exported/133200997/export-d85448a68f01bbd6644b4b40ef87233e-level.scn
+res://menu.tscn::4bf52c46db4bd2fdf9a05dbabb7d4c32::1689805190::res://.godot/exported/133200997/export-a4951207776b25ee5c8b2b05c1463587-menu.scn

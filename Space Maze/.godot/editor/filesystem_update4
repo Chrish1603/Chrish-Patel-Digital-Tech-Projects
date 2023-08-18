@@ -2,5 +2,3 @@ res://env.tres
 res://level.tscn
 res://assets/blocksLibrary.tres
 res://assets/player.tscn
-res://scripts/player.gd
-res://assets/blocks.tscn

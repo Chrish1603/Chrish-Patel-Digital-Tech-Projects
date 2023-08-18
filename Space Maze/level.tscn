@@ -44,6 +44,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(-1.5, 1, 4.5), Vector3(-1.5, 1, 4.5), Vector3(-4.5, 1, 4.5), Vector3(-4.5, 1, 4.5), Vector3(-1.5, 1, 4.5)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -1.21652e-31)]
+}
 
 [sub_resource type="Animation" id="Animation_v7dky"]
 resource_name = "enemy1animation"
@@ -90,6 +102,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(-1.5, 1, 4.5), Vector3(-1.5, 1, 4.5), Vector3(-4.5, 1, 4.5), Vector3(-4.5, 1, 4.5), Vector3(-1.5, 1, 4.5)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.48787e-16, 3.48787e-16, 3.48787e-16), Vector3(3.48787e-16, 3.48787e-16, 3.48787e-16), Vector3(3.48787e-16, 3.48787e-16, 1.5708), Vector3(3.48787e-16, 3.48787e-16, 1.5708), Vector3(3.48787e-16, 3.48787e-16, 3.48787e-16)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qn5nj"]
 _data = {
@@ -104,7 +128,7 @@ font_size = 90
 font_color = Color(0.894118, 0.776471, 0.192157, 1)
 
 [node name="Level" type="Node3D"]
-transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 8.42688, 0.0129395, -16.2856)
 
 [node name="Floor" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -1, 2.08165e-12)
@@ -113,6 +137,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -1, 2.08165e-12)
 shape = SubResource("BoxShape3D_ujpsu")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -0.0921631, 0, 0)
 mesh = SubResource("BoxMesh_kd830")
 
 [node name="Player" parent="." instance=ExtResource("1_c81rf")]
@@ -129,7 +154,7 @@ script = ExtResource("3_2iri2")
 target = NodePath("../Player/CameraTarget")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(0.965926, -1.48943e-09, 0.258819, -0.258819, -1.13133e-08, 0.965926, 1.48943e-09, -1, -1.13133e-08, 2.08165e-12, 5, 2.08165e-12)
+transform = Transform3D(0.965926, -1.48942e-09, 0.258819, -0.258819, -1.13133e-08, 0.965926, 1.48943e-09, -1, -1.13133e-08, 0, 5, 0)
 shadow_enabled = true
 directional_shadow_blend_splits = true
 
@@ -137,13 +162,13 @@ directional_shadow_blend_splits = true
 mesh_library = ExtResource("7_a4yst")
 cell_size = Vector3(1, 1, 1)
 data = {
-"cells": PackedInt32Array(65521, 65521, 0, 65521, 65522, 0, 65521, 65523, 0, 65521, 65524, 0, 65521, 65525, 0, 65521, 65526, 0, 65521, 65527, 0, 65521, 65528, 0, 65521, 65529, 0, 65521, 65530, 0, 65521, 65531, 0, 65521, 65532, 0, 65521, 65533, 0, 65521, 65534, 0, 65521, 65535, 0, 65521, 0, 0, 65521, 1, 0, 65521, 2, 0, 65521, 3, 0, 65521, 4, 0, 65521, 5, 0, 65521, 6, 0, 65521, 7, 0, 65521, 8, 0, 65521, 9, 0, 65521, 10, 0, 65521, 11, 0, 65521, 12, 0, 65521, 14, 0, 65521, 13, 0, 14, 14, 0, 14, 65522, 0, 14, 65523, 0, 14, 65524, 0, 14, 65525, 0, 14, 65526, 0, 14, 65527, 0, 14, 2, 0, 14, 1, 0, 14, 0, 0, 14, 65535, 0, 14, 65534, 0, 14, 65528, 0, 14, 65529, 0, 14, 65530, 0, 14, 65531, 0, 14, 65532, 0, 14, 65533, 0, 14, 3, 0, 14, 4, 0, 14, 5, 0, 14, 6, 0, 14, 7, 0, 14, 8, 0, 14, 9, 0, 14, 10, 0, 14, 11, 0, 14, 12, 0, 14, 13, 0, 65525, 65525, 1, 65526, 65525, 1, 65527, 65525, 1, 65528, 65525, 1, 65529, 65525, 1, 65530, 65525, 1, 65525, 65526, 1, 65525, 65527, 1, 65525, 65528, 1, 65525, 65529, 1, 65525, 65530, 1, 65525, 65531, 1, 65529, 65531, 1, 65529, 65532, 1, 65529, 65533, 1, 65529, 65530, 1, 65529, 65529, 1, 65530, 65529, 1, 65531, 65529, 1, 65532, 65529, 1, 65533, 65529, 1, 65534, 65525, 1, 65535, 65525, 1, 0, 65525, 1, 2, 65530, 1, 3, 65530, 1, 4, 65525, 1, 5, 65525, 1, 6, 65525, 1, 7, 65525, 1, 8, 65525, 1, 9, 65525, 1, 10, 65525, 1, 10, 65526, 1, 10, 65527, 1, 4, 65530, 1, 5, 65530, 1, 65525, 0, 1, 65525, 1, 1, 65529, 2, 1, 65529, 3, 1, 65529, 4, 1, 65529, 5, 1, 65525, 6, 1, 65525, 7, 1, 65525, 8, 1, 65525, 9, 1, 1, 4, 1, 6, 65530, 1, 7, 65530, 1, 7, 65531, 1, 7, 65532, 1, 65525, 2, 1, 65526, 2, 1, 65527, 2, 1, 65528, 2, 1, 65530, 2, 1, 65531, 2, 1, 65532, 2, 1, 65525, 10, 1, 65526, 10, 1, 65527, 10, 1, 65528, 10, 1, 65529, 10, 1, 65530, 10, 1, 65531, 10, 1, 65529, 6, 1, 65532, 10, 1, 2, 4, 1, 3, 4, 1, 4, 4, 1, 5, 4, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 3, 3, 1, 3, 2, 1, 3, 1, 1, 3, 0, 1, 3, 65535, 1, 6, 4, 1, 6, 5, 1, 6, 6, 1, 6, 7, 1, 6, 8, 1, 6, 9, 1, 6, 10, 1, 7, 7, 1, 8, 7, 1, 9, 7, 1, 10, 7, 1, 10, 3, 1, 10, 2, 1, 10, 1, 1, 10, 0, 1, 1, 65530, 1, 7, 65533, 1, 3, 65534, 1, 0, 9, 1, 14, 65521, 0, 65521, 65511, 0, 65521, 65512, 0, 65521, 65513, 0, 65521, 65514, 0, 65521, 65515, 0, 65521, 65516, 0, 65521, 65517, 0, 65521, 65518, 0, 65521, 65519, 0, 65521, 65520, 0, 65522, 65511, 0, 65523, 65511, 0, 65524, 65511, 0, 65525, 65511, 0, 65526, 65511, 0, 65527, 65511, 0, 65528, 65511, 0, 65529, 65511, 0, 65530, 65511, 0, 65531, 65511, 0, 65532, 65511, 0, 65533, 65511, 0, 65534, 65511, 0, 65535, 65511, 0, 0, 65511, 0, 1, 65511, 0, 2, 65511, 0, 3, 65511, 0, 4, 65511, 0, 5, 65511, 0, 6, 65511, 0, 7, 65511, 0, 8, 65511, 0, 9, 65511, 0, 10, 65511, 0, 11, 65511, 0, 12, 65511, 0, 13, 65511, 0, 14, 65511, 0, 14, 65512, 0, 14, 65513, 0, 14, 65514, 0, 14, 65515, 0, 14, 65516, 0, 14, 65517, 0, 14, 65518, 0, 14, 65519, 0, 14, 65520, 0, 65521, 15, 0, 65521, 16, 0, 65521, 17, 0, 65521, 18, 0, 65521, 19, 0, 65521, 20, 0, 65521, 21, 0, 65521, 22, 0, 65521, 23, 0, 65521, 24, 0, 65522, 24, 0, 65523, 24, 0, 65524, 24, 0, 65525, 24, 0, 65526, 24, 0, 65527, 24, 0, 65528, 24, 0, 65529, 24, 0, 65530, 24, 0, 65531, 24, 0, 65532, 24, 0, 65533, 24, 0, 65534, 24, 0, 65535, 24, 0, 0, 24, 0, 1, 24, 0, 2, 24, 0, 3, 24, 0, 4, 24, 0, 5, 24, 0, 6, 24, 0, 7, 24, 0, 8, 24, 0, 9, 24, 0, 10, 24, 0, 11, 24, 0, 12, 24, 0, 13, 24, 0, 14, 24, 0, 14, 15, 0, 14, 16, 0, 14, 17, 0, 14, 18, 0, 14, 19, 0, 14, 20, 0, 14, 23, 0, 14, 21, 0, 14, 22, 0)
+"cells": PackedInt32Array(65521, 65521, 0, 65521, 65522, 0, 65521, 65523, 0, 65521, 65524, 0, 65521, 65525, 0, 65521, 65526, 0, 65521, 65527, 0, 65521, 65528, 0, 65521, 65529, 0, 65521, 65530, 0, 65521, 65531, 0, 65521, 65532, 0, 65521, 65533, 0, 65521, 65534, 0, 65521, 65535, 0, 65521, 0, 0, 65521, 1, 0, 65521, 2, 0, 65521, 3, 0, 65521, 4, 0, 65521, 5, 0, 65521, 6, 0, 65521, 7, 0, 65521, 8, 0, 65521, 9, 0, 65521, 10, 0, 65521, 11, 0, 65521, 12, 0, 65521, 14, 0, 65521, 13, 0, 14, 14, 0, 14, 65522, 0, 14, 65523, 0, 14, 65524, 0, 14, 65525, 0, 14, 65526, 0, 14, 65527, 0, 14, 2, 0, 14, 1, 0, 14, 0, 0, 14, 65535, 0, 14, 65534, 0, 14, 65528, 0, 14, 65529, 0, 14, 65530, 0, 14, 65531, 0, 14, 65532, 0, 14, 65533, 0, 14, 3, 0, 14, 4, 0, 14, 5, 0, 14, 6, 0, 14, 7, 0, 14, 8, 0, 14, 9, 0, 14, 10, 0, 14, 11, 0, 14, 12, 0, 14, 13, 0, 65525, 65525, 1, 65526, 65525, 1, 65527, 65525, 1, 65528, 65525, 1, 65529, 65525, 1, 65530, 65525, 1, 65525, 65526, 1, 65525, 65527, 1, 65525, 65528, 1, 65525, 65529, 1, 65525, 65530, 1, 65525, 65531, 1, 65529, 65531, 1, 65529, 65532, 1, 65529, 65533, 1, 65529, 65530, 1, 65529, 65529, 1, 65530, 65529, 1, 65531, 65529, 1, 65532, 65529, 1, 65533, 65529, 1, 65534, 65525, 1, 65535, 65525, 1, 0, 65525, 1, 2, 65530, 1, 3, 65530, 1, 4, 65525, 1, 5, 65525, 1, 6, 65525, 1, 7, 65525, 1, 8, 65525, 1, 9, 65525, 1, 10, 65525, 1, 4, 65530, 1, 5, 65530, 1, 65525, 0, 1, 65525, 1, 1, 65529, 2, 1, 65529, 3, 1, 65529, 4, 1, 65529, 5, 1, 65525, 6, 1, 65525, 7, 1, 65525, 8, 1, 65525, 9, 1, 1, 4, 1, 6, 65530, 1, 65525, 2, 1, 65526, 2, 1, 65527, 2, 1, 65528, 2, 1, 65530, 2, 1, 65531, 2, 1, 65532, 2, 1, 65525, 10, 1, 65526, 10, 1, 65527, 10, 1, 65528, 10, 1, 65529, 10, 1, 65530, 10, 1, 65531, 10, 1, 65529, 6, 1, 65532, 10, 1, 2, 4, 1, 3, 4, 1, 4, 4, 1, 5, 4, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 3, 3, 1, 3, 2, 1, 3, 1, 1, 3, 0, 1, 3, 65535, 1, 1, 65530, 1, 3, 65534, 1, 0, 9, 1, 14, 65521, 0, 65521, 65511, 0, 65521, 65512, 0, 65521, 65513, 0, 65521, 65514, 0, 65521, 65515, 0, 65521, 65516, 0, 65521, 65517, 0, 65521, 65518, 0, 65521, 65519, 0, 65521, 65520, 0, 65522, 65511, 0, 65523, 65511, 0, 65524, 65511, 0, 65525, 65511, 0, 65526, 65511, 0, 65527, 65511, 0, 65528, 65511, 0, 65529, 65511, 0, 65530, 65511, 0, 65531, 65511, 0, 65532, 65511, 0, 65533, 65511, 0, 65534, 65511, 0, 65535, 65511, 0, 0, 65511, 0, 1, 65511, 0, 2, 65511, 0, 3, 65511, 0, 4, 65511, 0, 5, 65511, 0, 6, 65511, 0, 7, 65511, 0, 8, 65511, 0, 9, 65511, 0, 10, 65511, 0, 11, 65511, 0, 12, 65511, 0, 13, 65511, 0, 14, 65511, 0, 14, 65512, 0, 14, 65513, 0, 14, 65514, 0, 14, 65515, 0, 14, 65516, 0, 14, 65517, 0, 14, 65518, 0, 14, 65519, 0, 14, 65520, 0, 65521, 15, 0, 65521, 16, 0, 65521, 17, 0, 65521, 18, 0, 65521, 19, 0, 65521, 20, 0, 65521, 21, 0, 65521, 22, 0, 65521, 23, 0, 65521, 24, 0, 65522, 24, 0, 65523, 24, 0, 65524, 24, 0, 65525, 24, 0, 65526, 24, 0, 65527, 24, 0, 65528, 24, 0, 65529, 24, 0, 65530, 24, 0, 65531, 24, 0, 65532, 24, 0, 65533, 24, 0, 65534, 24, 0, 65535, 24, 0, 0, 24, 0, 1, 24, 0, 2, 24, 0, 3, 24, 0, 4, 24, 0, 5, 24, 0, 6, 24, 0, 7, 24, 0, 8, 24, 0, 9, 24, 0, 10, 24, 0, 11, 24, 0, 12, 24, 0, 13, 24, 0, 14, 24, 0, 14, 15, 0, 14, 16, 0, 14, 17, 0, 14, 18, 0, 14, 19, 0, 14, 20, 0, 14, 23, 0, 14, 21, 0, 14, 22, 0, 65522, 6, 1, 65523, 6, 1, 65524, 6, 1, 65530, 65524, 1, 65530, 65523, 1, 65530, 65522, 1, 65525, 65521, 1, 65524, 65521, 1, 65523, 65521, 1, 65522, 65521, 1, 10, 65519, 1, 10, 65520, 1, 10, 65521, 1, 6, 65519, 1, 6, 65520, 1, 10, 65518, 1, 65534, 65515, 1, 10, 65517, 1, 10, 65516, 1, 10, 65515, 1, 6, 65514, 1, 6, 65513, 1, 6, 65512, 1, 6, 65518, 1, 65534, 65521, 1, 0, 16, 1, 0, 15, 1, 0, 14, 1, 0, 13, 1, 0, 12, 1, 65529, 16, 1, 65529, 15, 1, 65532, 17, 1, 65532, 18, 1, 65532, 19, 1, 2, 20, 1, 1, 20, 1, 0, 20, 1, 65535, 20, 1, 65534, 20, 1, 65533, 20, 1, 65532, 20, 1, 5, 16, 1, 4, 16, 1, 3, 16, 1, 2, 16, 1, 1, 16, 1, 65529, 14, 1, 65528, 14, 1, 65527, 14, 1, 65526, 14, 1, 65525, 14, 1, 65529, 20, 1, 65528, 20, 1, 65527, 20, 1, 65526, 20, 1, 65525, 20, 1, 65529, 23, 1, 65529, 22, 1, 65529, 21, 1, 65524, 14, 1, 65523, 14, 1, 65522, 14, 1, 13, 7, 1, 12, 7, 1, 10, 11, 1, 10, 10, 1, 10, 12, 1, 10, 13, 1, 11, 7, 1, 5, 10, 1, 5, 9, 1, 5, 8, 1, 5, 7, 1, 5, 6, 1, 5, 5, 1, 10, 4, 1, 10, 3, 1, 10, 2, 1, 10, 1, 1, 10, 0, 1, 9, 0, 1, 8, 0, 1, 7, 0, 1, 6, 20, 1, 7, 20, 1, 8, 20, 1, 9, 20, 1, 10, 20, 1, 10, 19, 1, 10, 18, 1, 10, 17, 1, 10, 16, 1, 10, 23, 1, 10, 22, 1, 10, 21, 1, 65525, 19, 1, 65525, 18, 1, 10, 8, 1, 10, 7, 1, 10, 9, 1, 11, 65529, 1, 12, 65529, 1, 13, 65529, 1, 10, 65529, 1, 7, 65530, 1, 7, 65531, 1, 7, 65532, 1, 10, 65528, 1, 10, 65527, 1, 10, 65526, 1, 65535, 65521, 1, 0, 65521, 1, 1, 65521, 1, 2, 65521, 1, 3, 65521, 1, 4, 65521, 1, 5, 65521, 1, 6, 65521, 1, 9, 65521, 1, 8, 65521, 1, 7, 65521, 1, 2, 65517, 1, 65534, 65514, 1, 65534, 65513, 1, 65534, 65512, 1, 65535, 65515, 1, 0, 65515, 1, 1, 65515, 1, 2, 65515, 1, 2, 65516, 1, 65525, 65520, 1, 65525, 65519, 1, 65525, 65518, 1, 65525, 65517, 1, 65525, 65516, 1, 65525, 65515, 1, 65529, 65512, 1, 65529, 65513, 1, 65529, 65514, 1, 65529, 65515, 1, 65529, 65516, 1, 65529, 65517, 1, 65530, 65521, 1, 65522, 65531, 1, 65523, 65531, 1, 65524, 65531, 1)
 }
 
 [node name="enemies" type="Node3D" parent="."]
 
 [node name="enemy1" parent="enemies" instance=ExtResource("8_32g31")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5, 1, 4.5)
+transform = Transform3D(1, 1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -1.5, 1, 4.5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="enemies/enemy1"]
 autoplay = "enemy1animation"
@@ -152,7 +177,7 @@ libraries = {
 }
 
 [node name="enemy2" parent="enemies" instance=ExtResource("8_32g31")]
-transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -1.5, 1, 4.5)
+transform = Transform3D(1, 1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -1.5, 1, 4.5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="enemies/enemy2"]
 autoplay = "enemy2animation"
@@ -161,7 +186,7 @@ libraries = {
 }
 
 [node name="enemy3" parent="enemies" instance=ExtResource("8_32g31")]
-transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -1.5, 1, 4.5)
+transform = Transform3D(1, 1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -1.5, 1, 4.5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="enemies/enemy3"]
 autoplay = "enemy2animation"
@@ -172,79 +197,90 @@ libraries = {
 [node name="coins" type="Node3D" parent="."]
 
 [node name="coinholder 1" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 1, 2.08165e-12)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -8.59256, 1, -22.3254)
 
 [node name="coin" parent="coins/coinholder 1" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 2" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.59599, 1, -3.53306)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -12.4972, 1, -16.8003)
 
 [node name="coin" parent="coins/coinholder 2" instance=ExtResource("9_ke8an")]
 
 [node name="coinholder 3" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.48607, 1, -8.30743)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -7.72714, 1, 18.3442)
 
 [node name="coin" parent="coins/coinholder 3" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 4" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.67389, 1, -8.54834)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -4.30164, 1, -22.3619)
 
 [node name="coin" parent="coins/coinholder 4" instance=ExtResource("9_ke8an")]
 
 [node name="coinholder 5" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4667, 1, -8.38202)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 8.3216, 1.18567, 18.3284)
 
 [node name="coin" parent="coins/coinholder 5" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 6" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.01901, 1, -7.87424)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -0.145344, 1, -8.35813)
 
 [node name="coin" parent="coins/coinholder 6" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 7" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.93208, 1, -4.51993)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0.867969, 1, -22.3364)
 
 [node name="coin" parent="coins/coinholder 7" instance=ExtResource("9_ke8an")]
 
 [node name="coinholder 8" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.416999, 1, -5.38559)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -4.67279, 1, 0.0963917)
 
 [node name="coin" parent="coins/coinholder 8" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 9" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.49105, 1, -3.69394)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 2.50142, 1, -16.436)
 
 [node name="coin" parent="coins/coinholder 9" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 10" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.47167, 1, 3.08891)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 8.37895, 1, -16.134)
 
 [node name="coin" parent="coins/coinholder 10" instance=ExtResource("9_ke8an")]
 
 [node name="coinholder 11" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.22955, 1, -3.6543)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 12.5075, 1.77388, -21.399)
 
 [node name="coin" parent="coins/coinholder 11" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 12" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.4266, 1, 5.6058)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 12.3573, 1, 3.5022)
 
 [node name="coin" parent="coins/coinholder 12" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 13" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5199, 1, 2.06979)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -12.0103, 1, 16.5662)
 
 [node name="coin" parent="coins/coinholder 13" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 14" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5138, 1, 7.52087)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 12.6865, 1, -8.99035)
 
 [node name="coin" parent="coins/coinholder 14" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 15" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.6338, 1, 12.6835)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 12.5543, 1, 10.7302)
 
 [node name="coin" parent="coins/coinholder 15" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 16" type="Node3D" parent="coins"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.14726, 1, 9.12022)
@@ -252,14 +288,16 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.14726, 1, 9.12022)
 [node name="coin" parent="coins/coinholder 16" instance=ExtResource("9_ke8an")]
 
 [node name="coinholder 17" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.60045, 1, 12.7285)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 12.4228, 1, 21.1433)
 
 [node name="coin" parent="coins/coinholder 17" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 18" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.86158, 1, 6.2422)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 4.0642, 1, 6.32197)
 
 [node name="coin" parent="coins/coinholder 18" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 19" type="Node3D" parent="coins"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.92509, 1, 9.00429)
@@ -267,89 +305,106 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.92509, 1, 9.00429)
 [node name="coin" parent="coins/coinholder 19" instance=ExtResource("9_ke8an")]
 
 [node name="coinholder 20" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.46035, 1, 12.8061)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -1.36156, 1, 18.169)
 
 [node name="coin" parent="coins/coinholder 20" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 21" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.86891, 1, 13.0565)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -8.38438, 1, 12.6976)
 
 [node name="coin" parent="coins/coinholder 21" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 22" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1667, 1, 12.9877)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -12.5649, 1, 8.84192)
 
 [node name="coin" parent="coins/coinholder 22" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 23" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3294, 1, 4.68244)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -4.59583, 1, -4.40479)
 
 [node name="coin" parent="coins/coinholder 23" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 24" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.1424, 1, -0.62413)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -12.3416, 1, -1.82011)
 
 [node name="coin" parent="coins/coinholder 24" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 25" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.34283, 1, 4.46667)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -9.02284, 1, 22.6974)
 
 [node name="coin" parent="coins/coinholder 25" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 26" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.27158, 1, 9.01519)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -8.59024, 1, 5.1873)
 
 [node name="coin" parent="coins/coinholder 26" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 27" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4651, 1, -5.76005)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -12.5448, 1, -6.51758)
 
 [node name="coin" parent="coins/coinholder 27" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 0, 0, 0)
 
 [node name="coinholder 28" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.2599, 1, -11.9376)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 8.04475, 1, -8.05936)
 
 [node name="coin" parent="coins/coinholder 28" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 29" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.45438, 1, -12.1185)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -7.53088, 1, -12.8361)
 
 [node name="coin" parent="coins/coinholder 29" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 30" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.522694, 1, -11.986)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -0.562512, 1, -12.5043)
 
 [node name="coin" parent="coins/coinholder 30" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 31" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.52652, 1, -11.8959)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 6.47334, 1, -12.312)
 
 [node name="coin" parent="coins/coinholder 31" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 32" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.1692, 1, -11.7807)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 2.84022, 1.70657, 13.8137)
 
 [node name="coin" parent="coins/coinholder 32" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 33" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5795, 1, -6.29081)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 7.23194, 1.78574, 22.4759)
 
 [node name="coin" parent="coins/coinholder 33" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 34" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.567, 1, -1.93808)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 12.3864, 1, -3.22535)
 
 [node name="coin" parent="coins/coinholder 34" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 35" type="Node3D" parent="coins"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.75763, 1, 2.30927)
 
 [node name="coin" parent="coins/coinholder 35" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 36" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.22865, 1, 0.371178)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -7.81982, 1, -7.83542)
 
 [node name="coin" parent="coins/coinholder 36" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 37" type="Node3D" parent="coins"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.05858, 1, 4.62409)
@@ -357,19 +412,22 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.05858, 1, 4.62409)
 [node name="coin" parent="coins/coinholder 37" instance=ExtResource("9_ke8an")]
 
 [node name="coinholder 38" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4526, 1, 8.25564)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -3.49491, 1.25705, 22.542)
 
 [node name="coin" parent="coins/coinholder 38" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 39" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.85297, 1, -3.69511)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 5.29451, 1, -3.27441)
 
 [node name="coin" parent="coins/coinholder 39" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="coinholder 40" type="Node3D" parent="coins"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.98103, 1, 3.18651)
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 1.50648, 1, 2.38861)
 
 [node name="coin" parent="coins/coinholder 40" instance=ExtResource("9_ke8an")]
+transform = Transform3D(1, -1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, 0, 0, 0)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
