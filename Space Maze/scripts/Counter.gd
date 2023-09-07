@@ -11,7 +11,7 @@ func _ready():
 func _process(delta):
 	pass
 
-
+#coin counter increase
 func _on_coin_collected():
 	coins = coins + 1
 	_ready()

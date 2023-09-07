@@ -2,3 +2,8 @@ res://env.tres
 res://level.tscn
 res://assets/blocksLibrary.tres
 res://assets/player.tscn
+res://scripts/player.gd
+res://scripts/Counter.gd
+res://scripts/coin.gd
+res://Button_title_play.gd
+res://Camera3D.gd
