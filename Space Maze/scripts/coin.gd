@@ -18,7 +18,7 @@ func _on_coin_body_entered(body):
 		$AnimationPlayer.play("coin_bouce")
 		$Timer.start()
 
-#
+# when timer completes
 func _on_timer_timeout():
 	emit_signal("coinCollected")
 	queue_free()
