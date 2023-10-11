@@ -1,8 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://cwav173kv2dkv"]
+[gd_scene load_steps=4 format=3 uid="uid://cwav173kv2dkv"]
 
 [ext_resource type="PackedScene" uid="uid://biio8rtytbotj" path="res://level2.tscn" id="2_pmxer"]
 [ext_resource type="PackedScene" uid="uid://b3nv43ik6hdl2" path="res://level3.tscn" id="3_cfn2f"]
-[ext_resource type="PackedScene" uid="uid://215tlgt2j8kr" path="res://level4.tscn" id="4_1kco2"]
 [ext_resource type="PackedScene" uid="uid://cm11jfteus7h3" path="res://level1.tscn" id="10_qbskk"]
 
 [node name="Maze Run" type="Node3D"]
@@ -14,7 +13,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.0
 visible = false
 
 [node name="Level 3" parent="." instance=ExtResource("3_cfn2f")]
-visible = false
-
-[node name="Level 4" parent="." instance=ExtResource("4_1kco2")]
 visible = false

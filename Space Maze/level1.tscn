@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://cm11jfteus7h3"]
+[gd_scene load_steps=22 format=3 uid="uid://cm11jfteus7h3"]
 
 [ext_resource type="PackedScene" uid="uid://be8xf81d4nu1r" path="res://assets/player.tscn" id="1_c81rf"]
 [ext_resource type="Texture2D" uid="uid://bsvsap1drn1nk" path="res://textures/Tiles128A_2K_NormalGL.jpg" id="1_tmhlr"]
@@ -28,34 +28,6 @@ uv1_triplanar = true
 [sub_resource type="BoxMesh" id="BoxMesh_mno65"]
 material = SubResource("StandardMaterial3D_axmqf")
 size = Vector3(30, 2, 50)
-
-[sub_resource type="Animation" id="Animation_yeim3"]
-length = 7.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1, 2, 3, 4),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 0,
-"values": [Vector3(-1.5, 1, 4.5), Vector3(-1.5, 1, 4.5), Vector3(-4.5, 1, 4.5), Vector3(-4.5, 1, 4.5), Vector3(-1.5, 1, 4.5)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:rotation")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 0, -1.21652e-31)]
-}
 
 [sub_resource type="Animation" id="Animation_v7dky"]
 resource_name = "enemy1animation"
@@ -115,11 +87,68 @@ tracks/1/keys = {
 "values": [Vector3(3.48787e-16, 3.48787e-16, 3.48787e-16), Vector3(3.48787e-16, 3.48787e-16, 3.48787e-16), Vector3(3.48787e-16, 3.48787e-16, 1.5708), Vector3(3.48787e-16, 3.48787e-16, 1.5708), Vector3(3.48787e-16, 3.48787e-16, 3.48787e-16)]
 }
 
+[sub_resource type="Animation" id="Animation_y2wie"]
+resource_name = "enemy3animation"
+length = 7.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5, 3.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(8.01485, 1, 5.91008), Vector3(8.015, 1, 15.0682), Vector3(8.015, 1, 15.0682), Vector3(8.01485, 1, 5.91008)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5, 3.5, 6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(3.48787e-16, 3.48787e-16, 3.48787e-16), Vector3(4.88692, 3.48787e-16, 3.48787e-16), Vector3(4.88692, 3.48787e-16, 3.48787e-16), Vector3(3.48787e-16, 3.48787e-16, 3.48787e-16)]
+}
+
+[sub_resource type="Animation" id="Animation_yeim3"]
+length = 7.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(-1.5, 1, 4.5), Vector3(-1.5, 1, 4.5), Vector3(-4.5, 1, 4.5), Vector3(-4.5, 1, 4.5), Vector3(-1.5, 1, 4.5)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, -1.21652e-31)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qn5nj"]
 _data = {
-"RESET": SubResource("Animation_yeim3"),
-"enemy1animation": SubResource("Animation_v7dky"),
-"enemy2animation": SubResource("Animation_chnij")
+"L1enemy1animation": SubResource("Animation_v7dky"),
+"L1enemy2animation": SubResource("Animation_chnij"),
+"L1enemy3animation": SubResource("Animation_y2wie"),
+"RESET": SubResource("Animation_yeim3")
 }
 
 [sub_resource type="LabelSettings" id="LabelSettings_mt07p"]
@@ -172,7 +201,7 @@ data = {
 transform = Transform3D(1, 1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -1.5, 1, 4.5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="enemies/enemy1"]
-autoplay = "enemy1animation"
+autoplay = "L1enemy1animation"
 libraries = {
 "": SubResource("AnimationLibrary_qn5nj")
 }
@@ -181,7 +210,7 @@ libraries = {
 transform = Transform3D(1, 1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -1.5, 1, 4.5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="enemies/enemy2"]
-autoplay = "enemy2animation"
+autoplay = "L1enemy2animation"
 libraries = {
 "": SubResource("AnimationLibrary_qn5nj")
 }
@@ -190,7 +219,7 @@ libraries = {
 transform = Transform3D(1, 1.21652e-31, 0, -1.21652e-31, 1, 0, 0, 0, 1, -1.5, 1, 4.5)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="enemies/enemy3"]
-autoplay = "enemy2animation"
+autoplay = "L1enemy3animation"
 libraries = {
 "": SubResource("AnimationLibrary_qn5nj")
 }

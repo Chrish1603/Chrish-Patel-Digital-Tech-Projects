@@ -1,9 +1,10 @@
+Label
+TextureRect
+Control
 Node3D
 AnimationPlayer
 Timer
-Label
 Sprite2D
-Control
 CollisionShape3D
 Area3D
 Button

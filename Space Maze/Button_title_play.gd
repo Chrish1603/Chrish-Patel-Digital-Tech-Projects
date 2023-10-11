@@ -12,4 +12,4 @@ func _process(delta):
 	
 # play button
 func _on_Buttontitleplay_pressed():
-	get_tree().change_scene_to_file("res://mazerun.tscn")
+	get_tree().change_scene_to_file("res://level1.tscn")

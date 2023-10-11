@@ -1,8 +1,10 @@
 res://env.tres
-res://level2.tscn
-res://assets/blocksLibrary.tres
 res://level3.tscn
-res://level4.tscn
+res://assets/blocksLibrary.tres
+res://menu.tscn
+res://level1menu.tscn
 res://level1.tscn
-res://mazerun.tscn
-res://coin.tscn
+res://level2menu.tscn
+res://level3menu.tscn
+res://youwon.tscn
+res://gameover.tscn
