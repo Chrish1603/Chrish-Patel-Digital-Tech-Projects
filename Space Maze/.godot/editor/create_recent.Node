@@ -1,9 +1,9 @@
+Timer
 Label
 TextureRect
 Control
 Node3D
 AnimationPlayer
-Timer
 Sprite2D
 CollisionShape3D
 Area3D

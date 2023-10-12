@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bph4qqu5rcqih"]
+[gd_scene load_steps=6 format=3 uid="uid://bph4qqu5rcqih"]
 
 [ext_resource type="FontFile" uid="uid://dk6nu0n16s4a1" path="res://fonts/Kalam-Regular.ttf" id="1_p0qnm"]
 [ext_resource type="Texture2D" uid="uid://dsniwxga0el0" path="res://sprites/hud_coin.png" id="2_pb5hw"]
+[ext_resource type="Script" path="res://next_level.gd" id="3_rsrvd"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_4508q"]
 font = ExtResource("1_p0qnm")
@@ -55,3 +56,9 @@ vertical_alignment = 1
 position = Vector2(576, 384)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_pb5hw")
+
+[node name="L1Timer" type="Timer" parent="."]
+autostart = true
+script = ExtResource("3_rsrvd")
+
+[connection signal="timeout" from="L1Timer" to="L1Timer" method="_on_L1_timer_timeout"]

@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bxkxk85agelx3"]
+[gd_scene load_steps=5 format=3]
 
 [ext_resource type="FontFile" uid="uid://dk6nu0n16s4a1" path="res://fonts/Kalam-Regular.ttf" id="1_yjys4"]
 [ext_resource type="FontFile" uid="uid://bydxwvup0cibb" path="res://fonts/Nunito-VariableFont_wght.ttf" id="2_hw63f"]
-[ext_resource type="Script" path="res://Button_title_play.gd" id="3_p6g06"]
+[ext_resource type="Script" path="res://Button_play.gd" id="3_p6g06"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3yemh"]
 font = ExtResource("1_yjys4")
@@ -30,7 +30,7 @@ text = "You Won!"
 label_settings = SubResource("LabelSettings_3yemh")
 horizontal_alignment = 1
 
-[node name="Button_title_play" type="Button" parent="."]
+[node name="Button_play" type="Button" parent="."]
 layout_mode = 0
 offset_left = 320.0
 offset_top = 320.0
@@ -44,4 +44,4 @@ text = "PLAY AGAIN"
 flat = true
 script = ExtResource("3_p6g06")
 
-[connection signal="pressed" from="Button_title_play" to="Button_title_play" method="_on_Buttontitleplay_pressed"]
+[connection signal="pressed" from="Button_play" to="Button_play" method="_on_Buttontitleplay_pressed"]

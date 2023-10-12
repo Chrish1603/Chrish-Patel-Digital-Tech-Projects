@@ -32,6 +32,7 @@ size = Vector3(30, 2, 50)
 [sub_resource type="Animation" id="Animation_3nvny"]
 resource_name = "L3enemy1animation"
 length = 7.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -60,6 +61,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id="Animation_vfica"]
 resource_name = "L3enemy2animation"
 length = 4.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -116,6 +118,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id="Animation_3wgk6"]
 resource_name = "L3enemy4animation"
 length = 7.0
+loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true

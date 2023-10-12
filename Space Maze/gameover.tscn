@@ -1,8 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwvjvcdgrgtka"]
+[gd_scene load_steps=5 format=3 uid="uid://ccu3e8e0lfpb2"]
 
 [ext_resource type="FontFile" uid="uid://dk6nu0n16s4a1" path="res://fonts/Kalam-Regular.ttf" id="1_7r880"]
 [ext_resource type="FontFile" uid="uid://bydxwvup0cibb" path="res://fonts/Nunito-VariableFont_wght.ttf" id="2_kmnqb"]
-[ext_resource type="Script" path="res://Button_title_play.gd" id="3_nacjy"]
+[ext_resource type="Script" path="res://Button_play.gd" id="3_6tk08"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3yemh"]
 font = ExtResource("1_7r880")
@@ -42,6 +42,6 @@ theme_override_fonts/font = ExtResource("2_kmnqb")
 theme_override_font_sizes/font_size = 90
 text = "PLAY AGAIN"
 flat = true
-script = ExtResource("3_nacjy")
+script = ExtResource("3_6tk08")
 
-[connection signal="pressed" from="Button_title_play" to="Button_title_play" method="_on_Buttontitleplay_pressed"]
+[connection signal="pressed" from="Button_title_play" to="Button_title_play" method="_on_button_play_pressed"]

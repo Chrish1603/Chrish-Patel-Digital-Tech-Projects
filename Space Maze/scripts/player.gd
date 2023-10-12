@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
 # speed of player
-const SPEED = 10
-const ROTSPEED = 8
+const SPEED = 12
+const ROTSPEED = 10
 
 func _ready():
 	pass
