@@ -158,7 +158,7 @@ font_size = 90
 font_color = Color(0.894118, 0.776471, 0.192157, 1)
 
 [node name="Level 1" type="Node3D"]
-transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+transform = Transform3D(1, -3.48787e-16, 3.48787e-16, 3.48787e-16, 1, -3.48787e-16, -3.48787e-16, 3.48787e-16, 1, 2.08165e-12, 1, 2.08165e-12)
 
 [node name="Floor" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, -1, 2.08165e-12)
@@ -294,7 +294,7 @@ position = Vector2(1097, 63)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("10_y83nh")
 
-[node name="L1Counter" type="Label" parent="Control"]
+[node name="Counter" type="Label" parent="Control"]
 layout_mode = 0
 offset_left = 1160.0
 offset_right = 1280.0
@@ -308,22 +308,22 @@ script = ExtResource("12_ga46w")
 [connection signal="body_entered" from="enemies/enemy2" to="Player" method="_on_enemy_1_body_entered"]
 [connection signal="body_entered" from="enemies/enemy3" to="Player" method="_on_enemy_1_body_entered"]
 [connection signal="body_entered" from="coins/coinholder 1/coin" to="coins/coinholder 1/coin" method="_on_coin_body_entered"]
-[connection signal="coinCollected" from="coins/coinholder 1/coin" to="Control/L1Counter" method="_on_coin_collected"]
+[connection signal="coinCollected" from="coins/coinholder 1/coin" to="Control/Counter" method="_on_coin_collected"]
 [connection signal="body_entered" from="coins/coinholder 2/coin" to="coins/coinholder 2/coin" method="_on_coin_body_entered"]
-[connection signal="coinCollected" from="coins/coinholder 2/coin" to="Control/L1Counter" method="_on_coin_collected"]
+[connection signal="coinCollected" from="coins/coinholder 2/coin" to="Control/Counter" method="_on_coin_collected"]
 [connection signal="body_entered" from="coins/coinholder 3/coin" to="coins/coinholder 3/coin" method="_on_coin_body_entered"]
-[connection signal="coinCollected" from="coins/coinholder 3/coin" to="Control/L1Counter" method="_on_coin_collected"]
+[connection signal="coinCollected" from="coins/coinholder 3/coin" to="Control/Counter" method="_on_coin_collected"]
 [connection signal="body_entered" from="coins/coinholder 4/coin" to="coins/coinholder 4/coin" method="_on_coin_body_entered"]
-[connection signal="coinCollected" from="coins/coinholder 4/coin" to="Control/L1Counter" method="_on_coin_collected"]
+[connection signal="coinCollected" from="coins/coinholder 4/coin" to="Control/Counter" method="_on_coin_collected"]
 [connection signal="body_entered" from="coins/coinholder 5/coin" to="coins/coinholder 5/coin" method="_on_coin_body_entered"]
-[connection signal="coinCollected" from="coins/coinholder 5/coin" to="Control/L1Counter" method="_on_coin_collected"]
+[connection signal="coinCollected" from="coins/coinholder 5/coin" to="Control/Counter" method="_on_coin_collected"]
 [connection signal="body_entered" from="coins/coinholder 6/coin" to="coins/coinholder 6/coin" method="_on_coin_body_entered"]
-[connection signal="coinCollected" from="coins/coinholder 6/coin" to="Control/L1Counter" method="_on_coin_collected"]
+[connection signal="coinCollected" from="coins/coinholder 6/coin" to="Control/Counter" method="_on_coin_collected"]
 [connection signal="body_entered" from="coins/coinholder 7/coin" to="coins/coinholder 7/coin" method="_on_coin_body_entered"]
-[connection signal="coinCollected" from="coins/coinholder 7/coin" to="Control/L1Counter" method="_on_coin_collected"]
+[connection signal="coinCollected" from="coins/coinholder 7/coin" to="Control/Counter" method="_on_coin_collected"]
 [connection signal="body_entered" from="coins/coinholder 8/coin" to="coins/coinholder 8/coin" method="_on_coin_body_entered"]
-[connection signal="coinCollected" from="coins/coinholder 8/coin" to="Control/L1Counter" method="_on_coin_collected"]
+[connection signal="coinCollected" from="coins/coinholder 8/coin" to="Control/Counter" method="_on_coin_collected"]
 [connection signal="body_entered" from="coins/coinholder 9/coin" to="coins/coinholder 9/coin" method="_on_coin_body_entered"]
-[connection signal="coinCollected" from="coins/coinholder 9/coin" to="Control/L1Counter" method="_on_coin_collected"]
+[connection signal="coinCollected" from="coins/coinholder 9/coin" to="Control/Counter" method="_on_coin_collected"]
 [connection signal="body_entered" from="coins/coinholder 10/coin" to="coins/coinholder 10/coin" method="_on_coin_body_entered"]
-[connection signal="coinCollected" from="coins/coinholder 10/coin" to="Control/L1Counter" method="_on_coin_collected"]
+[connection signal="coinCollected" from="coins/coinholder 10/coin" to="Control/Counter" method="_on_coin_collected"]

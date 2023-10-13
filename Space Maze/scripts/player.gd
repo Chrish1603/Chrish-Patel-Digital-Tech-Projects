@@ -42,4 +42,5 @@ func _physics_process(delta):
 func _on_enemy_1_body_entered(body):
 	if body.name == "Player":
 		# game over menu
+		Global.level_count == 1
 		get_tree().change_scene_to_file("res://gameover.tscn")

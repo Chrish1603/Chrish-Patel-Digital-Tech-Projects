@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://bvi7uvya6ax0e"]
 
 [ext_resource type="FontFile" uid="uid://dk6nu0n16s4a1" path="res://fonts/Kalam-Regular.ttf" id="1_yjys4"]
 [ext_resource type="FontFile" uid="uid://bydxwvup0cibb" path="res://fonts/Nunito-VariableFont_wght.ttf" id="2_hw63f"]
@@ -44,4 +44,4 @@ text = "PLAY AGAIN"
 flat = true
 script = ExtResource("3_p6g06")
 
-[connection signal="pressed" from="Button_play" to="Button_play" method="_on_Buttontitleplay_pressed"]
+[connection signal="pressed" from="Button_play" to="Button_play" method="_on_Button_play_pressed"]

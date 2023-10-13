@@ -44,4 +44,4 @@ text = "PLAY AGAIN"
 flat = true
 script = ExtResource("3_6tk08")
 
-[connection signal="pressed" from="Button_title_play" to="Button_title_play" method="_on_button_play_pressed"]
+[connection signal="pressed" from="Button_title_play" to="Button_title_play" method="_on_Button_play_pressed"]

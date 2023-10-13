@@ -8,10 +8,22 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	if Global.level_count == 1 and coins == 10:
+		Global.level_count += 1
+		get_tree().change_scene_to_file("res://level2menu.tscn")
+		
+	elif Global.level_count == 2 and coins == 20:
+		Global.level_count += 1
+		get_tree().change_scene_to_file("res://level3menu.tscn")
+		
+	elif Global.level_count == 3 and coins == 30:
+		get_tree().change_scene_to_file("res://youwon.tscn")
+		
+	else:
+		pass
 
 #coin counter increase
 func _on_coin_collected():
 	coins = coins + 1
 	_ready()
-
+	
