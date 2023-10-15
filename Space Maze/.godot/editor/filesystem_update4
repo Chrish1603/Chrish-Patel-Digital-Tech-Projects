@@ -1,11 +1,7 @@
 res://env.tres
-res://level1.tscn
-res://assets/blocksLibrary.tres
 res://mazerun.tscn
-res://scripts/Counter.gd
+res://assets/blocksLibrary.tres
+res://Button_play.gd
+res://level1.tscn
 res://level2.tscn
 res://level3.tscn
-res://youwon.tscn
-res://global.gd
-res://scripts/player.gd
-res://level1menu.tscn

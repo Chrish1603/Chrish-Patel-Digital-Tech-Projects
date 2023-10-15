@@ -12,4 +12,5 @@ func _process(delta):
 	
 # play button
 func _on_Button_play_pressed():
+	Global.level_count = 1
 	get_tree().change_scene_to_file("res://level1menu.tscn")
