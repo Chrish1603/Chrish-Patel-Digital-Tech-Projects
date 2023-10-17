@@ -7,10 +7,11 @@ const ROTSPEED = 10
 func _ready():
 	pass
 
+@warning_ignore("unused_parameter")
 func _physics_process(delta):
 	
 	# player moving and rotating right
-	if Input.is_action_pressed( "ui_right") and Input.is_action_pressed("ui_left"):
+	if Input.is_action_pressed("ui_right") and Input.is_action_pressed("ui_left"):
 		velocity.x = 0
 	elif Input.is_action_pressed("ui_right"):
 		velocity.x = SPEED
@@ -42,5 +43,5 @@ func _physics_process(delta):
 func _on_enemy_1_body_entered(body):
 	if body.name == "Player":
 		# game over menu
-		Global.level_count == 1
+		Global.level_count = 1
 		get_tree().change_scene_to_file("res://gameover.tscn")

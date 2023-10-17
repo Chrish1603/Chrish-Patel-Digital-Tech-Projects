@@ -9,6 +9,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 # coin floating animation
+@warning_ignore("unused_parameter")
 func _physics_process(delta):
 	rotate_y(deg_to_rad(3))
 

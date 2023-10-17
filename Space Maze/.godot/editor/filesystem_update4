@@ -1,7 +1,8 @@
 res://env.tres
 res://mazerun.tscn
 res://assets/blocksLibrary.tres
-res://Button_play.gd
 res://level1.tscn
 res://level2.tscn
 res://level3.tscn
+res://level1menu.tscn
+res://level3menu.tscn
